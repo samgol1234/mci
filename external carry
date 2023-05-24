@@ -1,0 +1,30 @@
+
+ORG 0000H 
+MOV DPTR, #200H
+MOV A, #00H
+MOV R7, #00H
+MOV R6, #00H
+BACK: MOVX A, @DPTR
+ADD A, R7
+MOV R7, A
+JNC NEXT
+INC R2
+NEXT: INC DPTR
+DJNZ R6, BACK
+END
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
