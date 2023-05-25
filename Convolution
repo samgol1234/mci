@@ -1,0 +1,24 @@
+ CONVOLUTION OF SIGNAL
+clc;
+clear all;
+close all;
+t=[-5:0.02:5];
+y1=rectpuls(t);
+subplot(2,2,1);
+plot(t,y1);
+xlabel("time");
+ylabel("x(t)");
+title("Input signal");
+y2=rectpuls(t);
+subplot(2,2,2);
+plot(t,y2);
+xlabel("time");
+ylabel("x(t)");
+title("Impulse response");
+z=conv(y1,y2);
+subplot(2,2,3);
+plot(z);
+xlabel("time");
+ylabel("x(t)");
+legend("Convolution")
+title("Output Signal")
