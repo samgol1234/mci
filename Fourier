@@ -1,0 +1,90 @@
+clc ;
+clear all ;
+close all ;
+t = 0 : 0.1 : 100 ;
+w = 0 : 0.1 : 100 ;
+x = exp(-0.5*t) ;
+x = fft(x) ;
+subplot(2,1,1) ;
+plot(t,x) ;
+xlabel("time") ;
+ylabel("amplitude") ;
+legend("Exponential Signal" ;
+title("Input Signal") ;
+subplot(2,1,2) ;
+plot(w,abs(fftshift(X))) ;
+xlabel("frequency") ;
+ylabel("magnitude") ;
+legend("Fourier transform") ;
+title("Output signal") ;
+
+
+
+2] Fourier Transform of rectangular signal
+clc ;
+clear all ;
+close all ;
+T = 3 ;
+f0 = 1/T ;
+n = 700 ;
+t = linspace(-2*T,2*T,1500) ;
+w = linspace(-n*f0,n*f0,1500) ;
+x = rectpuls(t,T/4) ;
+x = fft(x)/length(x) ;
+subplot(2,1,1) ;
+plot(t,x);
+xlabel("time");
+ylabel("amplitude");
+legend("Rectangular pulse");
+title("Input Signal");
+subplot(2,1,2);
+plot(w,abs(fftshift(X)));
+xlabel("frequency");
+ylabel("magnitude");
+legend("Fourier transform");
+title("Output signal")
+
+
+
+3] Fourier Transform of sinc signal
+clc ;
+clear all ;
+close all ;
+t = -20 : 0.1 : 20 ;
+w = -20 : 0.1 : 20 ;
+x = sinc(t) ;
+x = fft(x)/length(x) ;
+subplot(2,1,1);
+plot(t,x);
+xlabel("time");
+ylabel("amplitude");
+legend("Sinc Signal");
+title("Input Signal");
+subplot(2,1,2);
+plot(w,abs(fftshift(X)));
+xlabel("frequency");
+ylabel("magnitude");
+legend("Fourier transform");
+title("Output signal");
+
+
+4] Fourier Transform of sinc square signal
+clc ;
+clear all ;
+close all ;
+t = -20 : 0.1 : 20 ;
+w = -20 : 0.1 : 20 ;
+x = sinc(t).*sinc(t) ;
+x = fft(x)/length(x) ;
+subplot(2,1,1);
+plot(t,x);
+xlabel("time");
+ylabel("amplitude");
+legend("Sinc Signal");
+title("Input Signal");
+subplot(2,1,2);
+plot(w,abs(fftshift(X)));
+xlabel("frequency");
+ylabel("magnitude");
+legend("Fourier transform");
+title("Output signal")
