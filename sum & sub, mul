@@ -1,0 +1,6 @@
+n3=min(min(N1),min(N2)):max(max(max(N1),max(N2))
+Z=zeros(1,length(N3))
+Z1=zeros(1,length(N3))
+Z(find(N3>=min(N1)&(N3<=max(N1))==1))=x
+Z1(find(N3>=min(N1)&(N3<=max(N2))==1))=y
+sum=Z+Z1;
